@@ -7,17 +7,17 @@ import Home from './Screens/Home'
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Testing the first one</Text>
-      <StatusBar style="auto" />
+      <Text>React Native \ Delivery Foods! </Text>
+      <Home/>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  container:{
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center"
+  }
 });
