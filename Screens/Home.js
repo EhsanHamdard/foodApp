@@ -13,7 +13,7 @@ export default function App() {
 	]
   return (
     <View style={styles.container}>
-      <View styles.containerImageSlider>
+      <View style={styles.containerImageSlider}>
       	<ImageSlider
       		style={styles.ImageSlider}
       		images={images}
@@ -32,8 +32,8 @@ const styles = StyleSheet.create({
   },
 
   containerImageSlider:{ 
-  height: 170
-  margin: 8 
+  height: 170,
+  margin:8 
 },
 ImageSlider:{
 	borderRadius: 10
