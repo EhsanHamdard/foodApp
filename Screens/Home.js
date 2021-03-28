@@ -42,7 +42,7 @@ export default function App() {
       	numColumns={3}
       	data={foods}
       	renderItem={({item}) => {
-      		return <FoodItems name= {item.name} price={item.price} image={item.image} />
+      		return <FoodItems name= {item.name} price={item.price} image={item.image} detail= {item.detail} />
       	}}
       /> 
     </View>
