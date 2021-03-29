@@ -11,11 +11,14 @@ const Stack = createStackNavigator()
 const Tab = createBottomTabNavigator()
 
 import Home from './Screens/Home'
-import Detail from './Screens/Detail'
+import Detail from './Screens/Detail' 
+import Favorite from './Screens/Favorite'
+import Profile from './Screens/Profile'
 
 export default function App() {
   return (
     <NavigationContainer>
+
       <Tab.Navigator
         initialRoutName="Food"
         tabBarOptions={{
@@ -27,7 +30,8 @@ export default function App() {
           name="Home"
           component={HomeStack}
           options={{
-            tabBarIcon: ({color,size}) => (
+            tabBarLabel: "Home",
+            tabBarIcon: ({color, size}) => (
               <MaterialCommunityIcons
                 name="home"
                 color={color}
@@ -36,6 +40,37 @@ export default function App() {
               )
           }}
         />
+
+        <Tab.Screen
+          name="Favorite"
+          component={FavoriteStack}
+          options={{
+            tabBarLabel: "Favorite",
+            tabBarIcon: ({color,size}) => (
+              <MaterialCommunityIcons
+                name="heart"
+                color={color}
+                size={size}
+              />
+              )
+          }}
+        />
+
+        <Tab.Screen
+          name="Profile"
+          component={ProfileStack}
+          options={{
+            tabBarLabel: "Profile",
+            tabBarIcon: ({color,size}) => (
+              <MaterialCommunityIcons
+                name="account"
+                color={color}
+                size={size}
+              />
+              )
+          }}
+        />
+
       </Tab.Navigator>
     </NavigationContainer> 
   );
@@ -59,6 +94,44 @@ function HomeStack(){
   <Stack.Screen
     name="Detail"
     component={Detail}
+  />
+  </Stack.Navigator>
+    )
+}
+
+function FavoriteStack(){
+  return(
+    <Stack.Navigator
+      initialRoutName="Favorite"
+      screenOptions={{
+        headerStyle: {backgroundColor:"#841548"},
+        headerTintColor: "#fff",
+        headerTintStyle: {fontWeight: "bold"}
+      }}
+      >
+      <Stack.Screen 
+        name="Favorite"
+        component={Favorite}
+        options={{title: "Favorite Page"}}
+  />
+  </Stack.Navigator>
+    )
+}
+
+function ProfileStack(){
+  return(
+    <Stack.Navigator
+      initialRoutName="Profile"
+      screenOptions={{
+        headerStyle: {backgroundColor:"#841548"},
+        headerTintColor: "#fff",
+        headerTintStyle: {fontWeight: "bold"}
+      }}
+      >
+      <Stack.Screen 
+        name="Profile"
+        component={Profile}
+        options={{title: "Profile Page"}}
   />
   </Stack.Navigator>
     )

@@ -1,5 +1,5 @@
 import React from 'react';
-import { StylSheet, Text, View, Button, ScrolView, } from 'react native';
+import { StyleSheet, Text, View, Button, ScrolView, } from 'react-native';
 
 import { Rating } from 'react-native-ratings'
 
@@ -34,7 +34,7 @@ export default function Detail(){
 		);
 }
 
-const styles = StylSheet.create({
+const styles = StyleSheet.create({
 	container: {
 		flex: 1
 	},

@@ -11,15 +11,15 @@ export default function FoodItems({image, name,price }) {
 
   return (
     <TouchableOpacity style={styles.container}
-    onPress = {() => navigation.navigate("Detail", {image, name, price})}
+    onPress = {() => navigation.navigate("Detail", {image, name, price, detail})}
     >
-      <Image
+    <Image
         style={styles.image}
         source={{uri: image}}
       />
-
+ 
        <View style={{alignItems: "center"}} >
-          <Text style={{fontWeight: "bold"}} >{name}</Text>
+          <Text style={{fontWeight: "bold"}}>{name}</Text>
           <Text>{price}</Text>
         </View>
 
